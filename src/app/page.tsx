@@ -27,7 +27,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <FilterSearch></FilterSearch>
+            <FilterSearch title={"Lorem, ipsum dolor sit amet"} />
 
             <div className="max-w-screen-xl mx-auto px-4 mb-16">
                 <h2 className="text-3xl font-semibold">Popular Destinations</h2>

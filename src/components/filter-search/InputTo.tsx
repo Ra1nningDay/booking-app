@@ -1,10 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import plane from "../../../public/icon-flag/airplane.png";
-
 import * as React from "react";
 import { Check, ChevronsUpDown } from "lucide-react";
+import planeranway from "../../../public/icon-flag/this.png";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -45,7 +44,7 @@ const cities = [
     },
 ];
 
-export default function InputFrom() {
+export default function InputTo() {
     const [open, setOpen] = React.useState(false);
     const [value, setValue] = React.useState("");
 
@@ -58,17 +57,17 @@ export default function InputFrom() {
                     aria-expanded={open}
                     className="w-[200px] py-6 justify-between"
                 >
-                    <div className="flex">
+                    <div className="flex items-center">
                         <Image
-                            src={plane}
-                            alt="plane"
+                            src={planeranway}
                             className="me-2"
-                            width={20}
+                            width={30}
+                            alt="ranway"
                         />
                         {value
-                            ? cities.find((citie) => citie.value === value)
+                            ? cities.find((cities) => cities.value === value)
                                   ?.label
-                            : "Where from?"}
+                            : "Where to?"}
                     </div>
                     <ChevronsUpDown className="opacity-50" />
                 </Button>
@@ -76,16 +75,16 @@ export default function InputFrom() {
             <PopoverContent className="w-[200px] p-0">
                 <Command>
                     <CommandInput
-                        placeholder="Airport or city"
+                        placeholder="Airport or city..."
                         className="h-9"
                     />
                     <CommandList>
-                        <CommandEmpty>No citie found.</CommandEmpty>
+                        <CommandEmpty>No cities found.</CommandEmpty>
                         <CommandGroup>
-                            {cities.map((citie) => (
+                            {cities.map((cities) => (
                                 <CommandItem
-                                    key={citie.value}
-                                    value={citie.value}
+                                    key={cities.value}
+                                    value={cities.value}
                                     onSelect={(currentValue) => {
                                         setValue(
                                             currentValue === value
@@ -95,11 +94,11 @@ export default function InputFrom() {
                                         setOpen(false);
                                     }}
                                 >
-                                    {citie.label}
+                                    {cities.label}
                                     <Check
                                         className={cn(
                                             "ml-auto",
-                                            value === citie.value
+                                            value === cities.value
                                                 ? "opacity-100"
                                                 : "opacity-0"
                                         )}
