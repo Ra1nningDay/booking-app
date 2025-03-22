@@ -1,6 +1,6 @@
 import Link from "next/link";
-import uk from "./../../../../public/icon-flag/uk.png";
 import Image from "next/image";
+import uk from "../../../public/icon-flag/uk.png";
 
 // const links = [
 //     {

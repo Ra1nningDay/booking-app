@@ -1,6 +1,6 @@
 import Image from "next/image";
 import search from "../../public/icon-flag/search.png";
-import { Button } from "@/components/ui/button";
+import FilterSearch from "@/components/filter-search/FilterSearch";
 
 export default function Home() {
     return (
@@ -26,22 +26,9 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="relative -mt-16 px-4 mb-16">
-                <div className="mx-auto max-w-screen-lg bg-white rounded-lg shadow-xl p-8">
-                    <h2 className="text-2xl font-semibold mb-4">
-                        Lorem, ipsum dolor sit amet
-                    </h2>
-                    <div className="flex">
-                        <input type="text" placeholder="From" />
-                        <input type="text" placeholder="To" />
-                        <input type="text" placeholder="Date" />
-                        <input type="text" placeholder="Passengers" />
-                        <Button variant="outline" className="cursor-pointer">
-                            Search
-                        </Button>
-                    </div>
-                </div>
-            </div>
+
+            <FilterSearch></FilterSearch>
+
             <div className="max-w-screen-xl mx-auto px-4 mb-16">
                 <h2 className="text-3xl font-semibold">Popular Destinations</h2>
             </div>
