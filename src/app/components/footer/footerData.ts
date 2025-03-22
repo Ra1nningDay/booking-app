@@ -1,6 +1,6 @@
 export const footerData = [
     {
-        title: "Company",
+        title: "Support",
         links: [
             { name: "About", href: "#" },
             { name: "Careers", href: "#" },
@@ -9,7 +9,7 @@ export const footerData = [
         ],
     },
     {
-        title: "Help center",
+        title: "Discover",
         links: [
             { name: "Discord Server", href: "#" },
             { name: "Twitter", href: "#" },
@@ -18,7 +18,7 @@ export const footerData = [
         ],
     },
     {
-        title: "Legal",
+        title: "Terms and setting",
         links: [
             { name: "Privacy Policy", href: "#" },
             { name: "Licensing", href: "#" },
@@ -26,12 +26,10 @@ export const footerData = [
         ],
     },
     {
-        title: "Download",
+        title: "About",
         links: [
-            { name: "iOS", href: "#" },
-            { name: "Android", href: "#" },
-            { name: "Windows", href: "#" },
-            { name: "MacOS", href: "#" },
+            { name: "Aboout us", href: "#" },
+            { name: "How we work", href: "#" },
         ],
     },
 ];

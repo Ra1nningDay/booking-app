@@ -1,5 +1,5 @@
 import Link from "next/link";
-import uk from "../../../public/icon-flag/uk.png";
+import uk from "./../../../../public/icon-flag/uk.png";
 import Image from "next/image";
 
 // const links = [
@@ -29,8 +29,9 @@ interface HeaderProps {
 export default function Navbar({ link, header }: HeaderProps) {
     return (
         <nav className="bg-white  shadow-md">
-            <div className="flex justify-between items-center px-4 py-3 max-w-[1920px] mx-auto">
-                <span className="text-5xl font-bold text-black ">
+            <div className="flex justify-between items-center px-4 py-3 max-w-screen-xl mx-auto">
+                {/* Logo */}
+                <span className="text-4xl font-bold text-black ">
                     <Link href={link}>{header}</Link>
                 </span>
 
@@ -47,6 +48,7 @@ export default function Navbar({ link, header }: HeaderProps) {
                     ))}
                 </ul> */}
 
+                {/* Select Languages */}
                 <div className="flex gap-2">
                     <div className="flex items-center me-2">
                         <button className="flex items-center">
@@ -60,6 +62,8 @@ export default function Navbar({ link, header }: HeaderProps) {
                             <span>EN/THB</span>
                         </button>
                     </div>
+
+                    {/* Authenticate Section */}
                     {auth.map((item, index) => (
                         <a
                             key={index}
